@@ -12,7 +12,7 @@ pip3 install -r requirements.txt
 ```
 # Usage
 
-## Training with input size 224 $\times$ 224
+## Training with input resolution of 224
 To train Evo-ViT  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
 
 Evo-ViT-T
@@ -36,25 +36,25 @@ python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_levit.py -
 ```
 The other models of Evo-LeViT are trained with the same command as mentioned above.
 
-### Training with input size 384 $\times$ 384
+### Training with input  resolution of 384
 
-To train Evo-ViT-B$^{*}$  on ImageNet on 2 nodes with 8 gpus each for 300 epochs, run:
+To train Evo-ViT-B*  on ImageNet on 2 nodes with 8 gpus each for 300 epochs, run:
 ```
 python3 -m torch.distributed.launch --nproc_per_node=8 --nnodes=$NODE_SIZE  --node_rank=$NODE_RANK --master_port=$MASTER_PORT --master_addr=$MASTER_ADDR main_deit.py --model evo_deit_base_patch16_384 --input-size 384 --batch-size 64 --data-path /path/to/imagenet --output_dir /path/to/save
 ```
 
-To train Evo-ViT-S$^{*}$  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
+To train Evo-ViT-S*  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
 ```
 python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_deit.py --model evo_deit_small_patch16_384 --batch-size 128 --input-size 384 --data-path /path/to/imagenet --output_dir /path/to/save"
 ```
 
-Evo-ViT-T$^{*}$  is trained with the same command as Evo-ViT-S$^{*}$.
+Evo-ViT-T*  is trained with the same command as Evo-ViT-S$^{*}$.
 
-To train Evo-LeViT-384$^{*}$  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
+To train Evo-LeViT-384*  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
 
 ```
 python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_levit.py --model EvoLeViT_384_384 --input-size 384 --batch-size 128 --data-path /path/to/imagenet --output_dir /path/to/save
 ```
 
-The other models of Evo-LeViT$^{*}$ are trained with the same command of Evo-LeViT-384$^{*}$.
+The other models of Evo-LeViT* are trained with the same command of Evo-LeViT-384*.
 
