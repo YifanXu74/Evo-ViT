@@ -49,7 +49,7 @@ __all__ = [specification.keys()]
 
 
 @register_model
-def EvoLeViT_128S(num_classes=1000, distillation=False,
+def EvoLeViT_128S(num_classes=1000, distillation=True,
                                                pretrained=False, fuse=False):
     return model_factory(**specification['EvoLeViT_128S'], num_classes=num_classes,
                          distillation=distillation, pretrained=pretrained, fuse=fuse,
