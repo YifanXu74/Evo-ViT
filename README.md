@@ -48,7 +48,7 @@ To train Evo-ViT-S*  on ImageNet on a single node with 8 gpus for 300 epochs,  r
 python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_deit.py --model evo_deit_small_patch16_384 --batch-size 128 --input-size 384 --data-path /path/to/imagenet --output_dir /path/to/save"
 ```
 
-Evo-ViT-T*  is trained with the same command as Evo-ViT-S$^{*}$.
+Evo-ViT-T*  is trained with the same command as Evo-ViT-S*.
 
 To train Evo-LeViT-384*  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
 
