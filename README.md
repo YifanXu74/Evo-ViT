@@ -36,7 +36,7 @@ python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_levit.py -
 ```
 The other models of Evo-LeViT are trained with the same command as mentioned above.
 
-### Training with input  resolution of 384
+## Training with input  resolution of 384
 
 To train Evo-ViT-B*  on ImageNet on 2 nodes with 8 gpus each for 300 epochs, run:
 ```
