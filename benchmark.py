@@ -150,7 +150,7 @@ class BenchmarkRunner:
         self.channels_last = kwargs.pop('channels_last', False)
         self.amp_autocast = torch.cuda.amp.autocast if self.use_amp else suppress
 
-        self.model = evo_deit.evo_deit_small_patch16_224()
+        self.model = evo_deit.evo_deit_base_patch16_224()
         self.model.to(
             device=self.device,
             dtype=self.model_dtype,
