@@ -10,7 +10,7 @@ Install the requirements by running:
 ```
 pip3 install -r requirements.txt
 ```
-The CUDA version is cuda10.1.
+The CUDA version is cuda11.0.
 # Usage
 
 ## Training with input resolution of 224
