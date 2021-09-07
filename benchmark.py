@@ -48,7 +48,7 @@ parser = argparse.ArgumentParser(description='PyTorch Benchmark')
 # benchmark specific args
 parser.add_argument('--model_list', metavar='NAME', default='',
                     help='txt file based list of model names to benchmark')
-parser.add_argument('--bench', default='both', type=str,
+parser.add_argument('--bench', default='inference', type=str,
                     help="Benchmark mode. One of 'inference', 'train', 'both'. Defaults to 'inference'")
 parser.add_argument('--detail', action='store_true', default=False,
                     help='Provide train fwd/bwd/opt breakdown detail if True. Defaults to False')
@@ -60,8 +60,8 @@ parser.add_argument('--num_bench_iter', default=40, type=int,
                     metavar='N', help='Number of benchmark iterations (default: 40)')
 
 # common inference / train args
-# parser.add_argument('--model', '-m', metavar='NAME', default='resnet50',
-#                     help='model architecture (default: resnet50)')
+parser.add_argument('--model', '-m', metavar='NAME', default='resnet50',
+                    help='model architecture (default: resnet50)')
 parser.add_argument('-b', '--batch_size', default=256, type=int,
                     metavar='N', help='mini-batch size (default: 256)')
 parser.add_argument('--img_size', default=None, type=int,
@@ -150,7 +150,7 @@ class BenchmarkRunner:
         self.channels_last = kwargs.pop('channels_last', False)
         self.amp_autocast = torch.cuda.amp.autocast if self.use_amp else suppress
 
-        self.model = evo_deit.evo_deit_tiny_patch16_224()
+        self.model = evo_deit.evo_deit_small_patch16_224()
         self.model.to(
             device=self.device,
             dtype=self.model_dtype,
