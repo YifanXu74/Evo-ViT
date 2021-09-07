@@ -36,13 +36,13 @@ specification = {
 prune_ratio_list = {
     'EvoLeViT_128S_384': [[1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5], [0.5, 0.5, 0.5]],
     'EvoLeViT_128_384': [[1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
-                                                  [0.5, 0.5, 0.5]],
+                         [0.5, 0.5, 0.5]],
     'EvoLeViT_192_384': [[1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
-                                                  [0.5, 0.5, 0.5]],
+                         [0.5, 0.5, 0.5]],
     'EvoLeViT_256_384': [[1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
-                                                  [0.5, 0.5, 0.5]],
+                         [0.5, 0.5, 0.5]],
     'EvoLeViT_384_384': [[1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
-                                                  [0.5, 0.5, 0.5]],
+                         [0.5, 0.5, 0.5]],
 }
 
 __all__ = [specification.keys()]
@@ -50,7 +50,7 @@ __all__ = [specification.keys()]
 
 @register_model
 def EvoLeViT_128S_384(num_classes=1000, distillation=True,
-                                               pretrained=False, fuse=False):
+                      pretrained=False, fuse=False):
     return model_factory(**specification['EvoLeViT_128S_384'], num_classes=num_classes,
                          distillation=distillation, pretrained=pretrained, fuse=fuse,
                          prune_ratio=prune_ratio_list['EvoLeViT_128S_384'])
@@ -58,7 +58,7 @@ def EvoLeViT_128S_384(num_classes=1000, distillation=True,
 
 @register_model
 def EvoLeViT_128_384(num_classes=1000, distillation=True,
-                                              pretrained=False, fuse=False):
+                     pretrained=False, fuse=False):
     return model_factory(**specification['EvoLeViT_128_384'], num_classes=num_classes,
                          distillation=distillation, pretrained=pretrained, fuse=fuse,
                          prune_ratio=prune_ratio_list['EvoLeViT_128_384'])
@@ -66,7 +66,7 @@ def EvoLeViT_128_384(num_classes=1000, distillation=True,
 
 @register_model
 def EvoLeViT_192_384(num_classes=1000, distillation=True,
-                                              pretrained=False, fuse=False):
+                     pretrained=False, fuse=False):
     return model_factory(**specification['EvoLeViT_192_384'], num_classes=num_classes,
                          distillation=distillation, pretrained=pretrained, fuse=fuse,
                          prune_ratio=prune_ratio_list['EvoLeViT_192_384'])
@@ -74,7 +74,7 @@ def EvoLeViT_192_384(num_classes=1000, distillation=True,
 
 @register_model
 def EvoLeViT_256_384(num_classes=1000, distillation=True,
-                                              pretrained=False, fuse=False):
+                     pretrained=False, fuse=False):
     return model_factory(**specification['EvoLeViT_256_384'], num_classes=num_classes,
                          distillation=distillation, pretrained=pretrained, fuse=fuse,
                          prune_ratio=prune_ratio_list['EvoLeViT_256_384'])
@@ -82,7 +82,7 @@ def EvoLeViT_256_384(num_classes=1000, distillation=True,
 
 @register_model
 def EvoLeViT_384_384(num_classes=1000, distillation=True,
-                                              pretrained=False, fuse=False):
+                     pretrained=False, fuse=False):
     return model_factory(**specification['EvoLeViT_384_384'], num_classes=num_classes,
                          distillation=distillation, pretrained=pretrained, fuse=fuse,
                          prune_ratio=prune_ratio_list['EvoLeViT_384_384'])
@@ -185,7 +185,7 @@ class StageModule(torch.nn.Module):
             x = x_[:, 1:]  # split out cls token
 
             N = x.shape[1]
-            N_ = int(N * self.prune_ratio) - 1
+            N_ = int(N * self.prune_ratio)
             indices = torch.argsort(global_attn, dim=1, descending=True)
 
             x_ga_oi = torch.cat((x, global_attn.unsqueeze(-1), ori_indices.unsqueeze(-1)), dim=-1)

@@ -184,7 +184,7 @@ class StageModule(torch.nn.Module):
             x = x_[:, 1:]  # split out cls token
 
             N = x.shape[1]
-            N_ = int(N * self.prune_ratio) - 1
+            N_ = int(N * self.prune_ratio)
             indices = torch.argsort(global_attn, dim=1, descending=True)
 
             x_ga_oi = torch.cat((x, global_attn.unsqueeze(-1), ori_indices.unsqueeze(-1)), dim=-1)
