@@ -338,7 +338,7 @@ class EvoVisionTransformer(nn.Module):
                     stage_index += 1
                     x_patch = x[:, 1:, :]
                     B, N, C = x_patch.shape
-                    N_ = int(N * self.stage_prune_ratio[stage_index])
+                    N_ = int(N * self.stage_prune_ratio[stage_index]) - 1
                     cls_attn, indices = torch.sort(cls_attn, dim=1, descending=True)
                     x_patch = easy_gather(x_patch, indices)
 
@@ -541,6 +541,7 @@ def checkpoint_filter_fn(state_dict, model):
         out_dict[k] = v
     return out_dict
 
+
 @register_model
 def evo_deit_tiny_patch16_224(pretrained=False, **kwargs):
     # drop_path = 0
@@ -563,6 +564,7 @@ def evo_deit_small_patch16_224(pretrained=False, **kwargs):
     model.default_cfg = _cfg()
     return model
 
+
 @register_model
 def evo_deit_base_patch16_224(pretrained=False, **kwargs):
     tradeoff = [1, 1, 1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
@@ -573,6 +575,7 @@ def evo_deit_base_patch16_224(pretrained=False, **kwargs):
     model.default_cfg = _cfg()
     return model
 
+
 @register_model
 def evo_deit_small_patch16_384(pretrained=False, **kwargs):
     tradeoff = [1, 1, 1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
@@ -582,6 +585,7 @@ def evo_deit_small_patch16_384(pretrained=False, **kwargs):
         norm_layer=partial(nn.LayerNorm, eps=1e-6), tradeoff=tradeoff, prune_ratio=prune_ratio, **kwargs)
     model.default_cfg = _cfg()
     return model
+
 
 @register_model
 def evo_deit_base_patch16_384(pretrained=False, **kwargs):
