@@ -59,3 +59,9 @@ python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_levit.py -
 
 The other models of Evo-LeViT* are trained with the same command of Evo-LeViT-384*.
 
+## Testing inference throughput
+To test inference throughput, first modify the model name in line 153 of benchmark.py. Then, run:
+```
+python3 benchmark.py
+```
+
