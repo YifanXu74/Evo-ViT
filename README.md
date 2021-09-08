@@ -15,7 +15,6 @@ NOTE: All experiments are conducted under cuda11.0. The torch and torchvision in
 https://download.pytorch.org/whl/cu110/torch-1.7.0%2Bcu110-cp36-cp36m-linux_x86_64.whl
 https://download.pytorch.org/whl/cu110/torchvision-0.8.1%2Bcu110-cp36-cp36m-linux_x86_64.whl
 
-
 # Usage
 
 ## Training with input resolution of 224
