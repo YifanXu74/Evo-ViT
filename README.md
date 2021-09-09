@@ -30,6 +30,8 @@ NOTE: all experiments in the paper are conducted under cuda11.0. The torch and t
 
 # Model Zoo
 
+Comming soon.
+<!-- 
 We provide our Evo-ViT models pretrained on ImageNet:
 | name            | Top-1 Acc (\%) | Top-5 Acc (\%) | Throughput (img/s)   | url                 |
 | --------------- | -------------- | -------------- | -------------------- | ------------------- |
@@ -45,7 +47,8 @@ We provide our Evo-ViT models pretrained on ImageNet:
 | Evo-LeViT-256*  |  11            |  11            |     11               | [Google Drive](xxx) |
 | Evo-LeViT-384*  |  11            |  11            |     11               | [Google Drive](xxx) |
 
-\* denotes the input image resolution is 384*384.
+\* denotes the input image resolution is 384*384. 
+-->
 
 # Usage
 
