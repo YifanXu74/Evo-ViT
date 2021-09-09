@@ -36,13 +36,13 @@ specification = {
 prune_ratio_list = {
     'EvoLeViT_128S': [[1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5], [0.5, 0.5, 0.5]],
     'EvoLeViT_128': [[1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
-                                                  [0.5, 0.5, 0.5]],
+                     [0.5, 0.5, 0.5]],
     'EvoLeViT_192': [[1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
-                                                  [0.5, 0.5, 0.5]],
+                     [0.5, 0.5, 0.5]],
     'EvoLeViT_256': [[1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
-                                                  [0.5, 0.5, 0.5]],
+                     [0.5, 0.5, 0.5]],
     'EvoLeViT_384': [[1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
-                                                  [0.5, 0.5, 0.5]],
+                     [0.5, 0.5, 0.5]],
 }
 
 __all__ = [specification.keys()]
@@ -50,14 +50,15 @@ __all__ = [specification.keys()]
 
 @register_model
 def EvoLeViT_128S(num_classes=1000, distillation=True,
-                                               pretrained=False, fuse=False):
+                  pretrained=False, fuse=False):
     return model_factory(**specification['EvoLeViT_128S'], num_classes=num_classes,
                          distillation=distillation, pretrained=pretrained, fuse=fuse,
                          prune_ratio=prune_ratio_list['EvoLeViT_128S'])
 
+
 @register_model
 def EvoLeViT_128(num_classes=1000, distillation=True,
-                                              pretrained=False, fuse=False):
+                 pretrained=False, fuse=False):
     return model_factory(**specification['EvoLeViT_128'], num_classes=num_classes,
                          distillation=distillation, pretrained=pretrained, fuse=fuse,
                          prune_ratio=prune_ratio_list['EvoLeViT_128'])
@@ -65,7 +66,7 @@ def EvoLeViT_128(num_classes=1000, distillation=True,
 
 @register_model
 def EvoLeViT_192(num_classes=1000, distillation=True,
-                                              pretrained=False, fuse=False):
+                 pretrained=False, fuse=False):
     return model_factory(**specification['EvoLeViT_192'], num_classes=num_classes,
                          distillation=distillation, pretrained=pretrained, fuse=fuse,
                          prune_ratio=prune_ratio_list['EvoLeViT_192'])
@@ -73,7 +74,7 @@ def EvoLeViT_192(num_classes=1000, distillation=True,
 
 @register_model
 def EvoLeViT_256(num_classes=1000, distillation=True,
-                                              pretrained=False, fuse=False):
+                 pretrained=False, fuse=False):
     return model_factory(**specification['EvoLeViT_256'], num_classes=num_classes,
                          distillation=distillation, pretrained=pretrained, fuse=fuse,
                          prune_ratio=prune_ratio_list['EvoLeViT_256'])
@@ -81,7 +82,7 @@ def EvoLeViT_256(num_classes=1000, distillation=True,
 
 @register_model
 def EvoLeViT_384(num_classes=1000, distillation=True,
-                                              pretrained=False, fuse=False):
+                 pretrained=False, fuse=False):
     return model_factory(**specification['EvoLeViT_384'], num_classes=num_classes,
                          distillation=distillation, pretrained=pretrained, fuse=fuse,
                          prune_ratio=prune_ratio_list['EvoLeViT_384'])
@@ -687,6 +688,12 @@ class LeViT(torch.nn.Module):
     def set_prune_ratio(self, mode):
         pass
 
+    def remove_cls(self):
+        if hasattr(self, 'head_cls'):
+            del self.head_cls
+        if hasattr(self, 'head_cls_dist'):
+            del self.head_cls_dist
+
     def forward(self, x):
         global global_attn
         global ori_indices
@@ -771,5 +778,6 @@ if __name__ == '__main__':
     for name in specification:
         net = globals()[name](fuse=False, pretrained=False)
         net.eval()
+        net.remove_cls()
         net(torch.randn(4, 3, 224, 224))
-        print(name, 'successed')
+        print(name, 'Parameters:', sum(p.numel() for p in net.parameters() if p.requires_grad))

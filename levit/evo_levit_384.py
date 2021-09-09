@@ -688,6 +688,12 @@ class LeViT(torch.nn.Module):
     def set_prune_ratio(self, mode):
         pass
 
+    def remove_cls(self):
+        if hasattr(self, 'head_cls'):
+            del self.head_cls
+        if hasattr(self, 'head_cls_dist'):
+            del self.head_cls_dist
+
     def forward(self, x):
         global global_attn
         global ori_indices
@@ -769,8 +775,10 @@ def model_factory(C, D, X, N, drop_path, weights,
 
 
 if __name__ == '__main__':
-    for name in specification:
-        net = globals()[name](fuse=False, pretrained=False)
-        net.eval()
-        net(torch.randn(2, 3, 384, 384))
-        print(name, 'successed')
+    if __name__ == '__main__':
+        for name in specification:
+            net = globals()[name](fuse=False, pretrained=False)
+            net.eval()
+            net.remove_cls()
+            net(torch.randn(2, 3, 384, 384))
+            print(name, 'Parameters:', sum(p.numel() for p in net.parameters() if p.requires_grad))
