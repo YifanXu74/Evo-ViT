@@ -5,10 +5,18 @@ This repository contains the PyTorch code for Evo-ViT.
 This work proposes a slow-fast token evolution approach to accelerate vanilla vision transformers of both flat and deep-narrow structures without additional pre-training and fine-tuning procedures. For details please see [Evo-ViT: Slow-Fast Token Evolution for Dynamic Vision Transformer](https://arxiv.org/abs/2108.01390) by Yifan Xu*, Zhijie Zhang*, Kekai Sheng, Ke Li, Weiming Dong, Liqing Zhang, Changsheng Xu, and Xing Sun.
 ![intro](method.png)
 
-
-
-
 Our code is based on [pytorch-image-models](https://github.com/rwightman/pytorch-image-models), [DeiT](https://github.com/facebookresearch/deit), and [LeViT](https://github.com/facebookresearch/LeViT).
+
+## Citation
+If you find our work useful in your research, please consider citing:
+```
+@article{xu2021evo,
+  title={Evo-ViT: Slow-Fast Token Evolution for Dynamic Vision Transformer},
+  author={Xu, Yifan and Zhang, Zhijie and Zhang, Mengdan and Sheng, Kekai and Li, Ke and Dong, Weiming and Zhang, Liqing and Xu, Changsheng and Sun, Xing},
+  journal={arXiv preprint arXiv:2108.01390},
+  year={2021}
+}
+```
 
 # Preparation
 Download and extract ImageNet train and val images from http://image-net.org/. The directory structure is the standard layout for the torchvision datasets.ImageFolder, and the training and validation data is expected to be in the train/ folder and val folder respectively.
@@ -109,15 +117,4 @@ The other models of Evo-LeViT* are trained with the same command of Evo-LeViT-38
 To test inference throughput, first modify the model name in line 153 of benchmark.py. Then, run:
 ```
 python3 benchmark.py
-```
-
-## Citation
-If you find our work useful in your research, please consider citing:
-```
-@article{xu2021evo,
-  title={Evo-ViT: Slow-Fast Token Evolution for Dynamic Vision Transformer},
-  author={Xu, Yifan and Zhang, Zhijie and Zhang, Mengdan and Sheng, Kekai and Li, Ke and Dong, Weiming and Zhang, Liqing and Xu, Changsheng and Sun, Xing},
-  journal={arXiv preprint arXiv:2108.01390},
-  year={2021}
-}
 ```
