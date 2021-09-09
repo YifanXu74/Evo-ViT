@@ -2,7 +2,7 @@
 
 This repository contains PyTorch training code for Evo-ViT: Slow-Fast Token Evolution for Dynamic Vision Transformer.
 ![intro](method.png)
-This work proposes to accelerate vanilla vision transformers of both flat and deep-narrow structures without additional pre-training and fine-tuning. 
+This work proposes a slow-fast token evolution approach to accelerate vanilla vision transformers of both flat and deep-narrow structures without additional pre-training and fine-tuning. 
 # Preparation
 Download and extract ImageNet train and val images from http://image-net.org/. The directory structure is the standard layout for the torchvision datasets.ImageFolder, and the training and validation data is expected to be in the train/ folder and val folder respectively.
 ```
