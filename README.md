@@ -45,7 +45,7 @@ We provide our Evo-ViT models pretrained on ImageNet:
 | Evo-LeViT-256*  |  11   |  11   |     11       | [Google Drive](xxx) |
 | Evo-LeViT-384*  |  11   |  11   |     11       | [Google Drive](xxx) |
 
-* denotes the input image resolution is 384*384.
+\* denotes the input image resolution is 384*384.
 
 # Usage
 
