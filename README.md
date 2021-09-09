@@ -1,6 +1,6 @@
 # Evo-ViT: Slow-Fast Token Evolution for Dynamic Vision Transformer
 
-This repository contains PyTorch training code for Evo-ViT.
+This repository contains the PyTorch code for Evo-ViT.
 ![intro](method.png)
 This work proposes a slow-fast token evolution approach to accelerate vanilla vision transformers of both flat and deep-narrow structures without additional pre-training and fine-tuning procedures. For details please see [Evo-ViT: Slow-Fast Token Evolution for Dynamic Vision Transformer](https://arxiv.org/abs/2108.01390).
 # Preparation
