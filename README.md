@@ -31,19 +31,19 @@ NOTE: all experiments in the paper are conducted under cuda11.0. The torch and t
 # Model Zoo
 
 We provide our Evo-ViT models pretrained on ImageNet:
-| name            | acc@1 | acc@5 | throughput   | url                 |
-| --------------- | ----- | ----- | ------------ | ------------------- |
-| Evo-ViT-T       |  11   |  11   |     11       | [Google Drive](xxx) |
-| Evo-ViT-S       |  11   |  11   |     11       | [Google Drive](xxx) |
-| Evo-ViT-B       |  11   |  11   |     11       | [Google Drive](xxx) |
-| Evo-ViT-B*      |  11   |  11   |     11       | [Google Drive](xxx) |
-| Evo-LeViT-128S  |  11   |  11   |     11       | [Google Drive](xxx) |
-| Evo-LeViT-128   |  11   |  11   |     11       | [Google Drive](xxx) |
-| Evo-LeViT-192   |  11   |  11   |     11       | [Google Drive](xxx) |
-| Evo-LeViT-256   |  11   |  11   |     11       | [Google Drive](xxx) |
-| Evo-LeViT-384   |  11   |  11   |     11       | [Google Drive](xxx) |
-| Evo-LeViT-256*  |  11   |  11   |     11       | [Google Drive](xxx) |
-| Evo-LeViT-384*  |  11   |  11   |     11       | [Google Drive](xxx) |
+| name            | Top-1 Acc (\%) | Top-5 Acc (\%) | Throughput (img/s)   | url                 |
+| --------------- | -------------- | -------------- | -------------------- | ------------------- |
+| Evo-ViT-T       |  11            |  11            |     11               | [Google Drive](xxx) |
+| Evo-ViT-S       |  11            |  11            |     11               | [Google Drive](xxx) |
+| Evo-ViT-B       |  11            |  11            |     11               | [Google Drive](xxx) |
+| Evo-ViT-B*      |  11            |  11            |     11               | [Google Drive](xxx) |
+| Evo-LeViT-128S  |  11            |  11            |     11               | [Google Drive](xxx) |
+| Evo-LeViT-128   |  11            |  11            |     11               | [Google Drive](xxx) |
+| Evo-LeViT-192   |  11            |  11            |     11               | [Google Drive](xxx) |
+| Evo-LeViT-256   |  11            |  11            |     11               | [Google Drive](xxx) |
+| Evo-LeViT-384   |  11            |  11            |     11               | [Google Drive](xxx) |
+| Evo-LeViT-256*  |  11            |  11            |     11               | [Google Drive](xxx) |
+| Evo-LeViT-384*  |  11            |  11            |     11               | [Google Drive](xxx) |
 
 \* denotes the input image resolution is 384*384.
 
