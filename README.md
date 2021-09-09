@@ -6,7 +6,7 @@ This work proposes to accelerate vanilla vision transformers of both flat and de
 # Preparation
 Download and extract ImageNet train and val images from http://image-net.org/. The directory structure is the standard layout for the torchvision datasets.ImageFolder, and the training and validation data is expected to be in the train/ folder and val folder respectively.
 
-All distillation settings are conducted with a teacher model RegNetY-160, which is available at https://dl.fbaipublicfiles.com/deit/regnety_160-a5fe301d.pth.
+All distillation settings are conducted with a teacher model RegNetY-160, which is available at [checkpoint](https://dl.fbaipublicfiles.com/deit/regnety_160-a5fe301d.pth).
 
 Install the requirements by running:
 ```
