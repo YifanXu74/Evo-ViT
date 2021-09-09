@@ -28,17 +28,24 @@ NOTE: all experiments in the paper are conducted under cuda11.0. The torch and t
 [torch1.7.0-cu110](https://download.pytorch.org/whl/cu110/torch-1.7.0%2Bcu110-cp36-cp36m-linux_x86_64.whl), 
 [torchvision-0.8.1-cu110](https://download.pytorch.org/whl/cu110/torchvision-0.8.1%2Bcu110-cp36-cp36m-linux_x86_64.whl)
 
-## Model Zoo
+# Model Zoo
 
-We provide our DynamicViT models pretrained on ImageNet:
-| name | arch | rho | acc@1 | acc@5 | FLOPs | url |
+We provide our Evo-ViT models pretrained on ImageNet:
+| name | acc@1 | acc@5 | throughput | url |
 | --- | --- | --- | --- | --- | --- | --- |
-| DynamicViT-256/0.7 | ```deit_256``` | 0.7 | 76.532 | 93.118 | 1.3G | [Google Drive](https://drive.google.com/file/d/1fpdTNRZtGOW25UwOadj1iUdjqmu88WkO/view?usp=sharing) / [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/ebda4114758f44d78bc0/?dl=1) |
-| DynamicViT-384/0.7 | ```deit_small``` | 0.7 | 79.316 | 94.676 | 2.9G | [Google Drive](https://drive.google.com/file/d/1H5kHHagdqo4emk9CgjfA7DA62XJr8Yc1/view?usp=sharing) / [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/58461f395c8f4829be85/?dl=1)|
-| DynamicViT-LV-S/0.5 | ```lvvit_s``` | 0.5 | 81.970 | 95.756 | 3.7G | [Google Drive](https://drive.google.com/file/d/1kPe3MhtYHNdG7natrU20xcAqodO6-Z58/view?usp=sharing) / [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/9d62a51e6fbb45c38a31/?dl=1) |
-| DynamicViT-LV-S/0.7 | ```lvvit_s``` | 0.7 | 83.076 | 96.252 | 4.6G | [Google Drive](https://drive.google.com/file/d/1dNloEsuEiTi592SdM_ELC36kOJ7aaF-3/view?usp=sharing) / [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/abe3e31af253476ea628/?dl=1)|
-| DynamicViT-LV-M/0.7 | ```lvvit_m``` | 0.7 | 83.816 | 96.584 | 8.5G | [Google Drive](https://drive.google.com/file/d/1dNab1B5ZOTVNpnpO6H1TsXKFM8BAlA3I/view?usp=sharing) / [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/f/5a1c519a39214fa6bc67/?dl=1) |
+| Evo-ViT-T |   |   |   | [Google Drive](xxx) |
+| Evo-ViT-S |   |   |   | [Google Drive](xxx) |
+| Evo-ViT-B |   |   |   | [Google Drive](xxx) |
+| Evo-ViT-B* |   |   |   | [Google Drive](xxx) |
+| Evo-LeViT-128S |   |   |   | [Google Drive](xxx) |
+| Evo-LeViT-128 |   |   |   | [Google Drive](xxx) |
+| Evo-LeViT-192 |   |   |   | [Google Drive](xxx) |
+| Evo-LeViT-256 |   |   |   | [Google Drive](xxx) |
+| Evo-LeViT-384 |   |   |   | [Google Drive](xxx) |
+| Evo-LeViT-256* |   |   |   | [Google Drive](xxx) |
+| Evo-LeViT-384* |   |   |   | [Google Drive](xxx) |
 
+* denotes the input image resolution is 384*384.
 
 # Usage
 
