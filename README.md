@@ -10,7 +10,7 @@ Install the requirements by running:
 ```
 pip3 install -r requirements.txt
 ```
-NOTE: all experiments are conducted under cuda11.0. The torch and torchvision installation packages with cuda11.0 are available at:
+NOTE: all experiments in the paper are conducted under cuda11.0. The torch and torchvision installation packages with cuda11.0 are available at:
 
 https://download.pytorch.org/whl/cu110/torch-1.7.0%2Bcu110-cp36-cp36m-linux_x86_64.whl
 https://download.pytorch.org/whl/cu110/torchvision-0.8.1%2Bcu110-cp36-cp36m-linux_x86_64.whl
