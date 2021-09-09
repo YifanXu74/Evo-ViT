@@ -83,3 +83,13 @@ To test inference throughput, first modify the model name in line 153 of benchma
 python3 benchmark.py
 ```
 
+## Citation
+If you find our work useful in your research, please consider citing:
+```
+@article{xu2021evo,
+  title={Evo-ViT: Slow-Fast Token Evolution for Dynamic Vision Transformer},
+  author={Xu, Yifan and Zhang, Zhijie and Zhang, Mengdan and Sheng, Kekai and Li, Ke and Dong, Weiming and Zhang, Liqing and Xu, Changsheng and Sun, Xing},
+  journal={arXiv preprint arXiv:2108.01390},
+  year={2021}
+}
+```
