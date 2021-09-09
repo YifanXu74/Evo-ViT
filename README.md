@@ -1,7 +1,7 @@
 # Evo-ViT: Slow-Fast Token Evolution for Dynamic Vision Transformer
 
 This repository contains PyTorch training code for Evo-ViT: Slow-Fast Token Evolution for Dynamic Vision Transformer.
-<img src=".\method.png" alt="method" style="zoom:67%;" />
+<img src=".\method.png" alt="method" style="zoom:50%;" />
 # Preparation
 Download and extract ImageNet train and val images from http://image-net.org/. The directory structure is the standard layout for the torchvision datasets.ImageFolder, and the training and validation data is expected to be in the train/ folder and val folder respectively.
 
