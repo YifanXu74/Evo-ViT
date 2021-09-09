@@ -313,6 +313,14 @@ class EvoVisionTransformer(nn.Module):
     def get_classifier(self):
         return self.head
 
+    def remove_cls(self):
+        if hasattr(self,'head_cls'):
+            del self.head_cls
+        if hasattr(self,'norm_cls'):
+            del self.norm_cls
+        if hasattr(self, 'avgpool'):
+            del self.avgpool
+
     def reset_classifier(self, num_classes, global_pool=''):
         self.num_classes = num_classes
         self.head = nn.Linear(self.embed_dim, num_classes) if num_classes > 0 else nn.Identity()
@@ -600,6 +608,8 @@ def evo_deit_base_patch16_384(pretrained=False, **kwargs):
 
 if __name__ == '__main__':
     model = evo_deit_tiny_patch16_224()
+    model.eval()
+    model.remove_cls()
     print('Parameters: ', sum(p.numel() for p in model.parameters() if p.requires_grad))
     x = torch.randn(2, 3, 224, 224)
     y = model(x)
