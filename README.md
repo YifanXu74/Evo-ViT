@@ -47,6 +47,7 @@ NOTE: all experiments in the paper are conducted under cuda11.0. If necessary, p
 
 Comming soon.
 
+<!-- 
 We provide our Evo-ViT models pretrained on ImageNet:
 | name            | Top-1 Acc (\%) | Throughput (img/s)   | url                 |
 | --------------- | -------------- | -------------------- | ------------------- |
@@ -63,7 +64,7 @@ We provide our Evo-ViT models pretrained on ImageNet:
 | Evo-LeViT-384*  |  11            |     11               | [Google Drive](xxx) |
 
 \* denotes the input image resolution is 384*384. 
-
+ -->
 
 # Usage
 
