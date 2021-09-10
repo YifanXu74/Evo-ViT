@@ -139,4 +139,5 @@ python3 visualize.py --model evo_deit_small_vis_patch16_224 --resume /path/to/ch
 Add parameter '--layer-wise-prune' if the visualized model is not trained with layer-to-stage training strategy.
 
 The visualization results of the single images are as follows:
+
 ![result](/imgs/results.png)
