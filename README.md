@@ -123,3 +123,6 @@ python3 benchmark.py
 
 ## Visualization
 Comming soon.
+<!-- 
+The visualization code is modified from [DynamicViT](https://github.com/raoyongming/DynamicViT).
+-->
