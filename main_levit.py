@@ -134,7 +134,7 @@ def get_args_parser():
     parser.add_argument('--teacher-model', default='regnety_160', type=str, metavar='MODEL',
                         help='Name of teacher model to train (default: "regnety_160"')
     parser.add_argument('--teacher-path', type=str,
-                        default='/apdcephfs/private_cookxu/deit_info/regnety_160-a5fe301d.pth')
+                        default='./regnety_160-a5fe301d.pth')
     parser.add_argument('--distillation-type', default='cls',
                         choices=['none', 'soft', 'hard', 'cls'], type=str, help="")
     parser.add_argument('--distillation-alpha',
