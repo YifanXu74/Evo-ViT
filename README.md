@@ -33,7 +33,7 @@ Download and extract ImageNet train and val images from http://image-net.org/. T
     class/2
       img4.jpeg
 ```
-All distillation settings are conducted with a teacher model RegNetY-160, which is available at [checkpoint](https://dl.fbaipublicfiles.com/deit/regnety_160-a5fe301d.pth).
+All distillation settings are conducted with a teacher model RegNetY-160, which is available at [teacher checkpoint](https://dl.fbaipublicfiles.com/deit/regnety_160-a5fe301d.pth).
 
 Install the requirements by running:
 ```
