@@ -129,6 +129,7 @@ python3 benchmark.py
 
 ## Visualization of token selection
 The visualization code is modified from [DynamicViT](https://github.com/raoyongming/DynamicViT).
+
 To visualize a batch of ImageNet val images, run:
 ```
 python3 visualize.py --model evo_deit_small_vis_patch16_224 --resume /path/to/checkpoint.pth --output_dir /path/to/save --data-path /path/to/imagenet --batch-size 64 
