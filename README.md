@@ -121,8 +121,14 @@ To test inference throughput, first modify the model name in line 153 of benchma
 python3 benchmark.py
 ```
 
-## Visualization
-Comming soon.
-<!-- 
+## Visualization of token selection
 The visualization code is modified from [DynamicViT](https://github.com/raoyongming/DynamicViT).
--->
+To visualize a batch of ImageNet val images, run:
+```
+python3 visualize.py --model evo_deit_small_vis_patch16_224 --resume /path/to/checkpoint.pth --output_dir /path/to/save --data-path /path/to/imagenet --batch-size 64 
+```
+To visualize a single images, run:
+```
+python3 visualize.py --model evo_deit_small_vis_patch16_224 --resume /path/to/checkpoint.pth --output_dir /path/to/save --img-path ./imgs/a.jpg --save-name evo_test
+```
+Add parameter '--layer-wise-prune' if the visualized model is not trained with layer-to-stage training strategy.
