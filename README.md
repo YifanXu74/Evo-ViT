@@ -51,17 +51,17 @@ Comming soon.
 We provide our Evo-ViT models pretrained on ImageNet:
 | name            | Top-1 Acc (\%) | Throughput (img/s)   | url                 |
 | --------------- | -------------- | -------------------- | ------------------- |
-| Evo-ViT-T       |  11            |     11               | [Google Drive](xxx) |
-| Evo-ViT-S       |  11            |     11               | [Google Drive](xxx) |
-| Evo-ViT-B       |  11            |     11               | [Google Drive](xxx) |
-| Evo-ViT-B*      |  11            |     11               | [Google Drive](xxx) |
-| Evo-LeViT-128S  |  11            |     11               | [Google Drive](xxx) |
-| Evo-LeViT-128   |  11            |     11               | [Google Drive](xxx) |
-| Evo-LeViT-192   |  11            |     11               | [Google Drive](xxx) |
-| Evo-LeViT-256   |  11            |     11               | [Google Drive](xxx) |
-| Evo-LeViT-384   |  11            |     11               | [Google Drive](xxx) |
-| Evo-LeViT-256*  |  11            |     11               | [Google Drive](xxx) |
-| Evo-LeViT-384*  |  11            |     11               | [Google Drive](xxx) |
+| Evo-ViT-T       |  72.0          |     4027             | [Google Drive](xxx) |
+| Evo-ViT-S       |  79.4          |     1510             | [Google Drive](xxx) |
+| Evo-ViT-B       |  81.3          |     462              | [Google Drive](xxx) |
+| Evo-ViT-B*      |  82.0          |     139              | [Google Drive](xxx) |
+| Evo-LeViT-128S  |  73.0          |     10135            | [Google Drive](xxx) |
+| Evo-LeViT-128   |  74.4          |     8323             | [Google Drive](xxx) |
+| Evo-LeViT-192   |  76.8          |     6148             | [Google Drive](xxx) |
+| Evo-LeViT-256   |  78.8          |     4277             | [Google Drive](xxx) |
+| Evo-LeViT-384   |  80.7          |     2412             | [Google Drive](xxx) |
+| Evo-LeViT-256*  |  81.1          |     1285             | [Google Drive](xxx) |
+| Evo-LeViT-384*  |  82.2          |     712              | [Google Drive](xxx) |
 
 \* denotes the input image resolution is 384*384. 
  -->
@@ -82,7 +82,7 @@ Evo-ViT-S
 python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_deit.py --model evo_deit_small_patch16_224 --batch-size 128 --data-path /path/to/imagenet --output_dir /path/to/save
 ```
 
-Sometimes loss Nan happens when training DeiT-B, which is described in this [issue](https://github.com/facebookresearch/deit/issues/29). Our solution is to reduce the batch size to 128, load a [warmup checkpoint](xxxxx) (comming soon) trained for 9 epochs, and train Evo-ViT for the remaining 291 epochs. To train Evo-ViT-B  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
+Sometimes loss Nan happens when training DeiT-B, which is described in this [issue](https://github.com/facebookresearch/deit/issues/29). Our solution is to reduce the batch size to 128, load a [warmup checkpoint](https://drive.google.com/file/d/1k3luEHWyQ7HuU6g1pmh2f2gDDOPqQmb5/view?usp=sharing) trained for 9 epochs, and train Evo-ViT for the remaining 291 epochs. To train Evo-ViT-B  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
 ```
 python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_deit.py --model evo_deit_base_patch16_224 --batch-size 128 --data-path /path/to/imagenet --output_dir /path/to/save --resume /path/to/warmup_checkpoint.pth
 ```
