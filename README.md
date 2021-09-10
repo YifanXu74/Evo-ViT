@@ -139,5 +139,6 @@ To visualize a single image, run:
 python3 visualize.py --model evo_deit_small_vis_patch16_224 --resume /path/to/checkpoint.pth --output_dir /path/to/save --img-path ./imgs/a.jpg --save-name evo_test
 ```
 Add parameter '--layer-wise-prune' if the visualized model is not trained with layer-to-stage training strategy.
-The visualization with the single images will get:
+
+The visualization results of the single images are as follows:
 ![result](/imgs/results.png)
