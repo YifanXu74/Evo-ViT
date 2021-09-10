@@ -68,6 +68,12 @@ We provide our Evo-ViT models pretrained on ImageNet:
 
 # Usage
 
+## Evaluation
+To evaluate a pre-trained models, run:
+```
+python3 main_deit.py --model evo_deit_small_patch16_224 --eval --resume /path/to/checkpoint.pth --batch-size 256 --data-path /path/to/imagenet
+```
+
 ## Training with input resolution of 224
 To train Evo-ViT  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
 <!--  
