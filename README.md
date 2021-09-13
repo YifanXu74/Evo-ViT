@@ -76,12 +76,11 @@ python3 main_deit.py --model evo_deit_small_patch16_224 --eval --resume /path/to
 
 ## Training with input resolution of 224
 To train Evo-ViT  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
-<!--  
+ 
 Evo-ViT-T
 ```
 python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_deit.py --model evo_deit_tiny_patch16_224 --drop-path 0 --batch-size 256 --data-path /path/to/imagenet --output_dir /path/to/save
 ```
--->
 
 Evo-ViT-S
 ```
