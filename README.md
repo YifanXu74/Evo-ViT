@@ -77,9 +77,9 @@ Sometimes loss Nan happens when training DeiT-B, which is described in this [iss
 python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_deit.py --model evo_deit_base_patch16_224 --batch-size 128 --data-path /path/to/imagenet --output_dir /path/to/save --resume /path/to/warmup_checkpoint.pth
 ```
 
-To train Evo-LeViT-192  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
+To train Evo-LeViT-128  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
 ```
-python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_levit.py --model EvoLeViT_192 --batch-size 256 --data-path /path/to/imagenet --output_dir /path/to/save
+python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_levit.py --model EvoLeViT_128 --batch-size 256 --data-path /path/to/imagenet --output_dir /path/to/save
 ```
 The other models of Evo-LeViT are trained with the same command as mentioned above.
 
