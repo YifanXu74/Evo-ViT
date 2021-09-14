@@ -3,7 +3,7 @@
 This repository contains the PyTorch code for Evo-ViT. 
 
 This work proposes a slow-fast token evolution approach to accelerate vanilla vision transformers of both flat and deep-narrow structures without additional pre-training and fine-tuning procedures. For details please see [Evo-ViT: Slow-Fast Token Evolution for Dynamic Vision Transformer](https://arxiv.org/abs/2108.01390) by Yifan Xu*, Zhijie Zhang*, Mengdan Zhang, Kekai Sheng, Ke Li, Weiming Dong, Liqing Zhang, Changsheng Xu, and Xing Sun.
-![intro](/imgs/method.png)
+![intro](imgs/method.png)
 
 Our code is based on [pytorch-image-models](https://github.com/rwightman/pytorch-image-models), [DeiT](https://github.com/facebookresearch/deit), and [LeViT](https://github.com/facebookresearch/LeViT).
 
@@ -124,7 +124,7 @@ Add parameter '--layer-wise-prune' if the visualized model is not trained with l
 
 The visualization results of Evo-ViT-S are as follows:
 
-![result](/imgs/results.png)
+![result](imgs/results.png)
 
 
 # Citation
