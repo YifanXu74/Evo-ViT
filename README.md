@@ -35,7 +35,7 @@ NOTE: all experiments in the paper are conducted under cuda11.0. If necessary, p
 # Model Zoo
 
 We provide our Evo-ViT models pretrained on ImageNet:
-| name            | Top-1 Acc (\%) | Throughput (img/s)   | url                                                                                                |
+| Name            | Top-1 Acc (\%) | Throughput (img/s)   | Url                                                                                                |
 | --------------- | -------------- | -------------------- | -------------------------------------------------------------------------------------------------- |
 | Evo-ViT-T       |  72.0          |     4027             | [Google Drive](https://drive.google.com/file/d/1AL4uHGHvCoFXkrtHRgf4XmurgRs5-qab/view?usp=sharing) |
 | Evo-ViT-S       |  79.4          |     1510             | [Google Drive](https://drive.google.com/file/d/1AiD1J-z9klr72-zczkJzX1HHVlxO7iin/view?usp=sharing) |
