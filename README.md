@@ -28,7 +28,7 @@ Install the requirements by running:
 ```
 pip3 install -r requirements.txt
 ```
-NOTE: all experiments in the paper are conducted under cuda11.0. If necessary, please install the following packages under the environment with CUDA version 11.0:
+NOTE that all experiments in the paper are conducted under cuda11.0. If necessary, please install the following packages under the environment with CUDA version 11.0:
 [torch1.7.0-cu110](https://download.pytorch.org/whl/cu110/torch-1.7.0%2Bcu110-cp36-cp36m-linux_x86_64.whl), 
 [torchvision-0.8.1-cu110](https://download.pytorch.org/whl/cu110/torchvision-0.8.1%2Bcu110-cp36-cp36m-linux_x86_64.whl).
 
