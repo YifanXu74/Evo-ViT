@@ -346,7 +346,7 @@ class EvoVisionTransformer(nn.Module):
                     stage_index += 1
                     x_patch = x[:, 1:, :]
                     B, N, C = x_patch.shape
-                    N_ = int(N * self.stage_prune_ratio[stage_index]) - 1
+                    N_ = int(N * self.stage_prune_ratio[stage_index])
                     cls_attn, indices = torch.sort(cls_attn, dim=1, descending=True)
                     x_patch = easy_gather(x_patch, indices)
 
