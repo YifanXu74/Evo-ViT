@@ -314,9 +314,9 @@ class EvoVisionTransformer(nn.Module):
         return self.head
 
     def remove_cls(self):
-        if hasattr(self,'head_cls'):
+        if hasattr(self, 'head_cls'):
             del self.head_cls
-        if hasattr(self,'norm_cls'):
+        if hasattr(self, 'norm_cls'):
             del self.norm_cls
         if hasattr(self, 'avgpool'):
             del self.avgpool
