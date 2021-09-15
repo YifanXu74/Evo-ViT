@@ -90,7 +90,7 @@ def EvoLeViT_384(num_classes=1000, distillation=True,
 
 global_attn = 0
 ori_indices = None
-learn_tradeoff_mode = False
+learn_tradeoff_mode = True
 
 
 def easy_gather(x, indices):
