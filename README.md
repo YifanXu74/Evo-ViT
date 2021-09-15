@@ -108,6 +108,7 @@ To test inference throughput, first modify the model name in line 153 of benchma
 ```
 python3 benchmark.py
 ```
+To test inference throughput with input resolution of 384, please add the parameter "--img_size 384"
 
 ## Visualization of token selection
 The visualization code is modified from [DynamicViT](https://github.com/raoyongming/DynamicViT).
