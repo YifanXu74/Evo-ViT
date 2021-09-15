@@ -43,7 +43,7 @@ We provide our Evo-ViT models pretrained on ImageNet:
 | Evo-ViT-B*      |  82.0          |     139              | [Google Drive](https://drive.google.com/file/d/1MBSH4Fx8Bq9cgGhktvYAb23EFioiv2y2/view?usp=sharing) |
 | Evo-LeViT-128S  |  73.0          |     10135            | [Google Drive](https://drive.google.com/file/d/1urqO1OqpMK8_Y3E7hQilLkCT9hsTv7ST/view?usp=sharing) |
 | Evo-LeViT-128   |  74.4          |     8323             | [Google Drive](https://drive.google.com/file/d/1rvMe1Iz_9d6meAbbov25pblCeQ7Q0tt2/view?usp=sharing) |
-| Evo-LeViT-192   |  76.8          |     6148             | [Google Drive](comming soon)                                                                       |
+| Evo-LeViT-192   |  76.8          |     6148             | [Google Drive](https://drive.google.com/file/d/1tWcgm3Z3WSaY4awycLwY4Jc1j_dIIOxn/view?usp=sharing) |
 | Evo-LeViT-256   |  78.8          |     4277             | [Google Drive](https://drive.google.com/file/d/1CG-MLsPhKzs1CI613sQoW0Q7fPUuLBOP/view?usp=sharing) |
 | Evo-LeViT-384   |  80.7          |     2412             | [Google Drive](https://drive.google.com/file/d/1cFmHWSCHeTaS4o5zL_qAc2tkWUugxvQh/view?usp=sharing) |
 | Evo-LeViT-256*  |  81.1          |     1285             | [Google Drive](https://drive.google.com/file/d/19rdLOb_zO5jodlH0tQkKjXjBnV6ksi6T/view?usp=sharing) |
