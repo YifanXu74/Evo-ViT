@@ -14,6 +14,7 @@ from timm.utils import accuracy, ModelEma
 from deit.losses_deit import DistillationLoss
 import utils
 
+
 def train_one_epoch(model: torch.nn.Module, criterion: DistillationLoss,
                     data_loader: Iterable, optimizer: torch.optim.Optimizer,
                     device: torch.device, epoch: int, loss_scaler, max_norm: float = 0,
