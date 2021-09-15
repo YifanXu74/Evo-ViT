@@ -72,7 +72,7 @@ Evo-ViT-S
 python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_deit.py --model evo_deit_small_patch16_224 --batch-size 128 --data-path /path/to/imagenet --output_dir /path/to/save
 ```
 
-Sometimes loss Nan happens when training DeiT-B, which is described in this [issue](https://github.com/facebookresearch/deit/issues/29). Our solution is to reduce the batch size to 128, load a [warmup checkpoint](https://drive.google.com/file/d/1k3luEHWyQ7HuU6g1pmh2f2gDDOPqQmb5/view?usp=sharing) trained for 9 epochs, and train Evo-ViT for the remaining 291 epochs. To train Evo-ViT-B  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
+Sometimes loss Nan happens in the early training epochs of DeiT-B, which is described in this [issue](https://github.com/facebookresearch/deit/issues/29). Our solution is to reduce the batch size to 128, load a [warmup checkpoint](https://drive.google.com/file/d/1k3luEHWyQ7HuU6g1pmh2f2gDDOPqQmb5/view?usp=sharing) trained for 9 epochs, and train Evo-ViT for the remaining 291 epochs. To train Evo-ViT-B  on ImageNet on a single node with 8 gpus for 300 epochs,  run:
 ```
 python3 -m torch.distributed.launch --nproc_per_node=8 --use_env main_deit.py --model evo_deit_base_patch16_224 --batch-size 128 --data-path /path/to/imagenet --output_dir /path/to/save --resume /path/to/warmup_checkpoint.pth
 ```
