@@ -47,7 +47,7 @@ We provide our Evo-ViT models pretrained on ImageNet:
 | Evo-LeViT-384   |  80.7          |     2412             | [Google Drive](https://drive.google.com/file/d/1cFmHWSCHeTaS4o5zL_qAc2tkWUugxvQh/view?usp=sharing) |
 | Evo-ViT-B*      |  82.0          |     139              | [Google Drive](https://drive.google.com/file/d/1MBSH4Fx8Bq9cgGhktvYAb23EFioiv2y2/view?usp=sharing) |
 | Evo-LeViT-256*  |  81.1          |     1285             | [Google Drive](https://drive.google.com/file/d/1MHHljQCzz-L6Sj18vq7QrQHhn4YvWjn8/view?usp=sharing) |
-| Evo-LeViT-384*  |  82.2          |     712              | [Google Drive](https://drive.google.com/file/d/1_iszMbyoeKJMkD5KdGG5_0Y-0XGj6HF7/view?usp=sharing) |
+| Evo-LeViT-384*  |  82.2          |     712              | [Google Drive](https://drive.google.com/file/d/1YzLPOLMLSymLzIdMqYol1HI7MwO35_7j/view?usp=sharing) |
 
 The input image resolution is 224 × 224 unless specified. \* denotes the input image resolution is 384 × 384. 
 
