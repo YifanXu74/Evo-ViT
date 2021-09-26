@@ -139,4 +139,4 @@ If you find our work useful in your research, please consider citing:
 }
 ```
 
-More precise code will be updated in the future.
+More precise version will be updated in the future.
