@@ -131,10 +131,13 @@ The visualization results of Evo-ViT-S are as follows:
 # Citation
 If you find our work useful in your research, please consider citing:
 ```
-@inproceedings{xu2022evovit,
-  title={Evo-ViT: Slow-Fast Token Evolution for Dynamic Vision Transformer},
+@inproceedings{evo-vit,
+  title={Evo-vit: Slow-fast token evolution for dynamic vision transformer},
   author={Xu, Yifan and Zhang, Zhijie and Zhang, Mengdan and Sheng, Kekai and Li, Ke and Dong, Weiming and Zhang, Liqing and Xu, Changsheng and Sun, Xing},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={36},
+  number={3},
+  pages={2964--2972},
   year={2022}
 }
 ```
